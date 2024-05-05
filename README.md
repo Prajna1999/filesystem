@@ -1,19 +1,86 @@
-stdio.h is a header file in the C programming language that provides declarations for standard input/output functions. The name "stdio" stands for "standard input/output."
-This header file contains function prototypes and macros that allow you to perform input and output operations in your C program. It defines functions such as printf() for formatted output, scanf() for formatted input, getchar() for reading a single character, putchar() for writing a single character, and many others.
-Here are some commonly used functions declared in stdio.h:
+# Tiny Filesystem
 
-printf(): Prints formatted output to the standard output stream (usually the console).
-scanf(): Reads formatted input from the standard input stream (usually the keyboard).
-getchar(): Reads a single character from the standard input stream.
-putchar(): Writes a single character to the standard output stream.
-fopen(): Opens a file for reading or writing.
-fclose(): Closes a file.
-fread(): Reads data from a file.
-fwrite(): Writes data to a file.
-fgets(): Reads a line of text from a file or the standard input stream.
-fputs(): Writes a line of text to a file or the standard output stream.
+A tiny open-source filesystem implementation in C, providing basic file I/O operations and extensibility.
 
-To use the functions and macros declared in stdio.h, you need to include this header file at the beginning of your C source file using the #include directive:
-cCopy code#include <stdio.h>
-This statement tells the compiler to include the contents of the stdio.h header file in your program, allowing you to use the standard input/output functions.
-The stdio.h header file is part of the C standard library and is available on all platforms that support C programming. It provides a standardized way to perform input and output operations, making your code portable across different systems.
+## Features
+
+- Create, open, and close files
+- Read from and write to files
+- Append data to existing files
+- Extensible design for adding new features and functionality
+
+## Getting Started
+
+### Prerequisites
+
+- C compiler (GCC or Clang)
+- Git (for cloning the repository)
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/Prajna1999/tiny-filesystem.git
+
+2. Navigate to the project directory:
+cd tiny-filesystem
+
+3. Compile the source code:
+gcc tiny-filesystem.c -o tiny-filesystem
+
+### Usage
+
+1. Run the compiled program:
+ ./tiny-filesystem  
+
+2. Follow the on-screen instructions to perform file I/O operations.
+
+## File I/O Operations
+
+- `open_file(file_path, mode)`: Open a file in the specified mode ("r" for read, "w" for write, "a" for append).
+- `close_file(file)`: Close an open file.
+- `read_line(file)`: Read a line from a file.
+- `write_line(file, line)`: Write a line to a file.
+
+## Extending the Filesystem
+
+The project is designed to be extensible, allowing you to add new features and functionality. Here are some ideas for extension:
+
+- Implement directory support (create, delete, list directories)
+- Add support for file metadata (file size, timestamps, permissions)
+- Implement file searching and filtering capabilities
+- Introduce file locking mechanisms for concurrent access
+- Develop a command-line interface for interacting with the filesystem
+
+To extend the filesystem, follow these steps:
+
+1. Create a new branch for your feature:
+git checkout -b feature/your-feature-name
+
+2. Implement your changes and enhancements in the codebase.
+
+3. Test your changes thoroughly.
+
+4. Commit your changes with descriptive commit messages:
+git commit -m "Add your commit message here"
+
+5. Push your branch to the remote repository:
+git push origin feature/your-feature-name
+
+6. Open a pull request on GitHub describing your changes and enhancements.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs, have suggestions, or want to contribute new features, please open an issue or submit a pull request. Make sure to follow the project's coding style and guidelines.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language))
+- [File I/O in C](https://www.geeksforgeeks.org/basics-file-handling-c/)
+
+## Contact
+
+For any questions or inquiries, please contact [gituprajna20@gmail.com](mailto:gituprajna20@gmail.com).
